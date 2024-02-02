@@ -1,26 +1,31 @@
 <template>
-  <img alt="Realpad logo" src="./assets/logo.webp" style="width: 250px; height: auto;">
-  <DataDisplay/>
+  <div class="app-container">
+    <img alt="Realpad logo" src="@/assets/logo.webp" class="app-logo">
+    <ForecastDisplay/>
+  </div>
 </template>
 
 <script>
-import DataDisplay from './components/DataDisplay.vue'
+import ForecastDisplay from '@/components/ForecastDisplay.vue'
 
 export default {
   name: 'App',
   components: {
-    DataDisplay
+    ForecastDisplay
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.app-container {
   text-align: center;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   color: #2c3e50;
-  margin-top: 60px;
+  padding-top: 60px;
+}
+
+.app-logo {
+  width: 250px;
+  height: auto;
 }
 </style>
